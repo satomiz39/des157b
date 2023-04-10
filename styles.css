@@ -3,14 +3,27 @@
 }
 
 body {
-    background-color: #333;
-    color: rgb(235, 235, 235);
+    background-color: #ECD06F;
+    color: rgb(21, 21, 22);
     transition: all 2s;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 body.switch {
-    background-color: rgb(235, 235, 235);
-    color: #333;
+    background-color: rgb(38, 31, 81);
+    color: white;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+h3 {
+    text-transform: uppercase;
 }
 
 #container {
@@ -23,9 +36,68 @@ body.switch {
     padding-top: 2em;
 }
 
+/*circle face*/
+#face {
+    position: absolute;
+    top: -200px;
+    left: 10%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 900px;
+    border-radius: 50%;
+    background-color: #F6955D;
+    z-index: -1;
+  }
+
+#face.switch {
+    background-color: #ECD06F;
+  }
+
 header {
     margin: 0 auto 2em auto;
+    line-height: 1em; 
 }
+
+/*header background animation*/
+#headerBg1 img {
+    position: absolute;
+    right: 50px;
+    top: 20px;
+    animation: float 6s infinite ease-in-out;
+}
+
+#headerBg1.switch {
+    visibility: hidden;
+    opacity:0;
+}
+
+#headerBg2.switch {
+    visibility: visible;
+    opacity:1;
+}
+
+#headerBg2 img {
+    position: absolute;
+    right: 50px;
+    top: 40px;
+    animation: float 6s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% {transform: translate(0px, 0px);}
+    50% {transform: translate(0px, 40px);}
+    100% {transform: translate(0px, 0px);}
+}
+
+.showing {
+    visibility: visible;
+    opacity:1;
+  }
+
+.hidden {
+    visibility: hidden;
+    opacity:0;
+  }
 
 #banner {
     position: relative;
@@ -33,18 +105,47 @@ header {
     width: 1100px;
     height: 250px;
     margin: auto;
-    background-color: rgb(235, 235, 235);
     color: #333;
     overflow: hidden;
     display: grid;
 	place-items: center;
+    background-color: transparent;
 }
 
-#banner.switch {
-    background-color: #333;
+#banner.switch {   
     color: rgb(235, 235, 235);
     transition: all 2s;
 }
+
+/*banner googly eyes*/
+#banner .leftEye
+ {
+    width: 60px;
+    height: auto;
+    position: absolute;
+    left: 60px;
+}
+
+.leftEye:hover {
+    cursor: pointer;
+    transform: rotate(140deg);
+    transition-duration: 240ms;
+}
+
+.rightEye:hover {
+    cursor: pointer;
+    transform: rotate(140deg);
+    transition-duration: 240ms;
+}
+
+#banner .rightEye
+ {
+    width: 60px;
+    height: auto;
+    position: absolute;
+    left: 200px;
+}
+
 
 main {
     display: flex;
@@ -54,10 +155,12 @@ main {
 
 main section {
     width: 25%;
-    border: 1px rgb(235, 235, 235) dashed;
+    border-radius: 6px;
     margin: 0 .25em;
     padding: 1em;
+    background-color: white;
 }
+
 
 a {
     text-decoration: none;
@@ -78,16 +181,21 @@ section a {
     line-height: 1.1em;
     display: inline-block;
     padding: .5em;
-    color: orange;
+    color: black;
 }
 
 section a:hover {
-    background-color: orange;
+    background-color: #F6955D;
     color: #333;
 }
 
+section.switch {
+    background-color: #545169;
+}
+
 section.switch a {
-    color: #333;
+    color: white;
+    
 }
 
 section.switch a:hover {
@@ -100,9 +208,11 @@ button {
     top: 20px;
     right: 20px;
     padding: 12px;
-    background-color: orange;
+    background-color: #F6955D;
     color: #333;
     border: 1px solid transparent;
+    border-radius: 60px;
+    transition: 1000ms;
 }
 
 button:hover {
@@ -113,9 +223,13 @@ button:hover {
 button.switch {
     background-color: rgb(235, 235, 235);
     border-color: #333;
+    /*background animation*/
 }
 
 button.switch:hover {
     background-color: #333;
     color: rgb(235, 235, 235)
 }
+
+
+

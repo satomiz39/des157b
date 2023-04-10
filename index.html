@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
 
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
     <title>Home is...DES 157B!</title>
 
     <link href="styles.css" rel="stylesheet" />
@@ -16,24 +21,30 @@
 <body>
 
     <div id="container">
-
         <header>
-
-            <h1>
-                Satomi Richardson.
-            </h1>
-
+            <div id="face"></div>
+            <h1>Satomi Richardson</h1>
             <h2>DES 157B - Interactive Media III - S2023</h2>
+
+            <!-- header background -->
+            <div id="headerBg1" class="daytime">
+                <img src="images/clouds.png" alt="clouds" class="clouds">
+            </div>
+
+            <div id="headerBg2" class="hidden">
+                <img src="images/stars.png" alt="stars" class="stars">
+            </div>
+
 
             <!--this is for the interactive banner-->
             <div id="banner">
-                <h3>This is my banner!</h3>
+                <img src="images/eye.png" class="leftEye" alt="googlyeyes">
+                <img src="images/eye.png" class="rightEye" alt="googlyeyes">
             </div>
 
         </header>
 
         <main>
-
             <section id="projects">
 
                 <h3>ministudios</h3>
@@ -103,7 +114,7 @@
                 </nav>
             </section>
 
-            <button>switch</button>
+            <button></button>
 
         </main>
 
