@@ -68,6 +68,7 @@ body {
 #feather:hover {
     transform: translate(-50%, -50%) rotate(360deg);
     transition: transform 1s ease-in-out;
+    cursor: pointer;
   }
   
 
