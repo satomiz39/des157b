@@ -23,10 +23,9 @@ body {
 
 #poem p {
     position: absolute;
-    padding: 1em;
     font-size: 1.5em;
-    background-color: black;
     transition: all 2.5s;
+    font-family: 'Playfair Display', serif;
 }
 
 #line1 {
@@ -35,21 +34,21 @@ body {
 }
 
 #line2 {
-    bottom: 20%;
+    bottom: 24%;
     right: 10%;
 }
 
 #line3 {
-    bottom: 10%;
+    bottom: 18%;
     right: 10%;
 }
 
 #feather {
     width: 8%;
     position: absolute;
-    top: -10%;
+    top: 0%;
     right: 10%;
-    animation: feather-fall 24s forwards;
+    animation: feather-fall 26s forwards;
 }
 
 @keyframes feather-fall {
@@ -58,13 +57,19 @@ body {
         opacity: 0;
     }
     50% {
-        opacity: 0.5;
+        opacity: 0%;
     }
     100% {
         top: 80%;
         opacity: 1;
     }
 }
+
+#feather:hover {
+    transform: translate(-50%, -50%) rotate(360deg);
+    transition: transform 1s ease-in-out;
+  }
+  
 
 .hidden {
     opacity: 0;
