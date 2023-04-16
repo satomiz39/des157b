@@ -31,6 +31,7 @@
             headerBg2.removeAttribute('class');
             for (const section of sections) {
                 section.removeAttribute('class');
+                headerBg2.classList.add('hidden');
             }
             mode = 'dark'
         }
