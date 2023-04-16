@@ -6,9 +6,8 @@
 
 body {
   font-family: 'Noto Sans', sans-serif;
-  width: 100vw;
-  /* max-width: 1200px;
-  min-width: 900px; */
+  max-width: 1200px;
+  min-width: 900px;
   height: 100vh;
   margin: auto;
   display: block;
@@ -77,6 +76,10 @@ article {
     display:flex;
     justify-content: center;
     padding-top: 60px;
+  }
+
+  footer {
+    margin-bottom: 0;
   }
 
   .selfie img{
