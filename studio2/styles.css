@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    background-color: rgb(215, 187, 121);
+    padding: 4em;
+    font-size: 25px;
+}
+
+main {
+margin-top: 2em;
+display: flex;
+gap: 2em;
+}
