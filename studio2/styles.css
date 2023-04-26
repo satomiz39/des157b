@@ -8,8 +8,16 @@
 
 body {
     background-color: rgb(215, 187, 121);
-    padding: 4em;
+    padding: 2em;
     font-size: 25px;
+    width: 100vw;
+}
+
+#container {
+    width: 1200px;
+    height: 700px;
+    background-color: aliceblue;
+    padding: 2em;
 }
 
 main {
@@ -17,3 +25,38 @@ margin-top: 2em;
 display: flex;
 gap: 2em;
 }
+
+#barGraph {
+    line-height: 3em;
+    min-width: 450px;
+    font-size: 20px;
+}
+p {
+
+}
+
+.day {
+    display: flex;
+    width: 400px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+.barBase {
+    margin-left: 0;
+    height: 40px;
+    border-radius: 6px;
+    width: 300px;
+    background-color: rgb(174, 176, 177);
+    position: relative;
+    left: 0;
+  }
+
+.barColor {
+    height: 40px;
+    background-color: rgb(58, 171, 228);
+    width: 64%;
+    border-radius: 6px;
+  }
+
+  

@@ -1,34 +1,34 @@
 {
     "Monday" : {
-        "water" : "64 oz",
+        "water" : "64",
         "how" : "Drank water throughout the day"
     },
     "Tuesday" : {
-        "water" : "80 oz",
+        "water" : "80",
         "how" : "Had a water bottle nearby all day"
     },
     "Wednesday" : {
-        "water" : "56 oz",
+        "water" : "56",
         "how" :  "Drank water during and outside a class"
     },
     "Thursday" : {
-        "water" : "72 oz",
+        "water" : "72",
         "how" : "Drank water with every meal"
     },
     "Friday" : {
-        "water" : "60 oz",
+        "water" : "60",
         "how" : "Forgot to drink water in the afternoon"
     },
     "Saturday" : {
-        "water" : "68 oz",
+        "water" : "68",
         "how" : "Reminded myself to drink water throughout the day"
     },
     "Sunday" : {
-        "water" : "75 oz",
+        "water" : "75",
         "how" : "Drank water while running errands"
     },
     "WeeklyTotal" : {
-        "water" : "415 oz",
+        "water" : "415",
         "how" : "Total amount of warter I had in a week"
     }
 }
