@@ -6,49 +6,75 @@
     async function getData(){
         const water = await fetch('data/water.json');
         const data = await water.json();
-        // Gets the keys and puts them in an array
+      
         const dataPoints = Object.keys(data);
         // Gets the values and puts them in the globalData array
         globalData = Object.values(data);
+        console.log(globalData);
         // Gets the number of entries in the JSON file
         numDataPoints = dataPoints.length;
         //console.log(globalData, numDataPoints);
-    }
-
-    function showWaterInfo(point, data){
-        const water = [
-            // '<i class="far fa-angry"></i>',
-            // '<i class="far fa-frown"></i>',
-            // '<i class="far fa-meh"></i>',
-            // '<i class="far fa-smile"></i>',
-            // '<i class="far fa-grin-beam"></i>',
-            // '<i class="far fa-grin-tears"></i>'
-        ];
-        document.querySelector('#reason').innerHTML = data[point].how;
-        document.querySelector('#moods').innerHTML = water[ data[point].water ];
-    }
-
-    // Event listener for when the mouse moves
-    document.addEventListener('mousemove', reportPos);
-
-    let prevLoc = 0;
-
-    function reportPos(event) {
-        const windowSize = window.innerWidth;
-        //The window needs to be divided into sections for each time in the JSON data
-        const timeSection = windowSize / numDataPoints;
-        const xPos = event.clientX;
-        // changeTime will be a number from 0-16
-        const changeTime = Math.floor(xPos / timeSection);
-
-        // When you move the mouse into the next segment, change the interface.
-        if (changeTime !== prevLoc) {
-            //console.log(changeTime);
-            showWaterInfo(changeTime, globalData);
-            prevLoc = changeTime;
-        }
+        makeBars(globalData);
     }
 
     getData();
+    function makeBars(data){
+        const mondayWater = data[0].water;
+        const tuesdayWater = data[1].water;
+        const wednesdayWater = data[2].water;
+        const thursdayWater = data[3].water;
+        const fridayWater = data[4].water;
+        const saturdayWater = data[5].water;
+        const sundayWater = data[6].water;
+        document.querySelector('.barColorMonday').style.width = mondayWater + '%';
+        document.querySelector('.barColorTuesday').style.width = tuesdayWater + '%';
+        document.querySelector('.barColorWednesday').style.width = wednesdayWater + '%';
+        document.querySelector('.barColorThursday').style.width = thursdayWater + '%';
+        document.querySelector('.barColorFriday').style.width = fridayWater + '%';
+        document.querySelector('.barColorSaturday').style.width = saturdayWater + '%';
+        document.querySelector('.barColorSunday').style.width = sundayWater + '%';
+
+        const bars =  document.querySelectorAll('.barBase div');
+        const water = document.querySelector('.water');
+
+
+        for (const eachBar of bars){
+            eachBar.addEventListener('mouseover', function(event){
+            
+                const thisBar = event.target.className;
+                if (thisBar == 'barColorMonday'){
+                water.style.height = mondayWater + '%';
+                document.querySelector('#how').innerHTML = data[0].how;
+                }
+                else if (thisBar == 'barColorTuesday'){
+                    water.style.height = tuesdayWater + '%';
+                    document.querySelector('#how').innerHTML = data[1].how;
+                }
+                else if (thisBar == 'barColorWednesday'){
+                    water.style.height = wednesdayWater + '%';
+                    document.querySelector('#how').innerHTML = data[2].how;
+                }
+                else if (thisBar == 'barColorThursday'){
+                    water.style.height = thursdayWater + '%';
+                    document.querySelector('#how').innerHTML = data[3].how;
+                }
+                else if (thisBar == 'barColorFriday'){
+                    water.style.height = fridayWater + '%';
+                    document.querySelector('#how').innerHTML = data[4].how;
+                }
+                else if (thisBar == 'barColorSaturday'){
+                    water.style.height = saturdayWater + '%';
+                    document.querySelector('#how').innerHTML = data[5].how;
+                }
+                else if (thisBar == 'barColorSunday'){
+                    water.style.height = sundayWater + '%';
+                    document.querySelector('#how').innerHTML = data[6].how;
+                }
+              
+            });
+        }
+    };
+   
+   
 
 })(); // end IIFE

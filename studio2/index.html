@@ -9,7 +9,7 @@
     <!--Google Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
 
     <title>Check Yourself</title>
 
@@ -24,61 +24,71 @@
         <h2>My Daily Water Intake</h2>
       </header>
         <main>
-            <!--Left side-->
-            <section id="glass">
-                <div>glass of water image goes here</div>
-                <p><span id="waterAmount"> oz</span></p>
-            </section>
+          <section id="leftSide">
+            <div class="glass">
+              <div class="water">
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+              </div>     
+            </div>
+              <p id="amount">Total<span id="waterAmount"> 415 oz</span></p> 
+              <p id="how"></p>
+          </section>
 
-            <!--Right side-->
+          <!--Right side-->
             <section id="barGraph">
                 <div class="day">
                   <p>Monday</p>
                   <div class="barBase">
-                    <div class="barColor"></div>
+                    <div class="barColorMonday"></div>
                   </div>
+                  <p class = "dailyAmount">64oz</p>
                 </div>
                 <div class="day">
                   <p>Tuesday</p>
                   <div class="barBase">
-                    <div class="barColor"></div>
+                    <div class="barColorTuesday"></div>
                   </div>
+                  <p class = "dailyAmount">80oz</p>
                 </div>
                 <div class="day">
                   <p>Wednesday</p>
                   <div class="barBase">
-                    <div class="barColor"></div>
+                    <div class="barColorWednesday"></div>
                   </div>
+                  <p class = "dailyAmount">56oz</p>
                 </div>
                 <div class="day">
                   <p>Thursday</p>
                   <div class="barBase">
-                    <div class="barColor"></div>
+                    <div class="barColorThursday"></div>                  
                   </div>
+                  <p class = "dailyAmount">72oz</p>
                 </div>
                 <div class="day">
                   <p>Friday</p>
                   <div class="barBase">
-                    <div class="barColor"></div>
-                  </div>
+                    <div class="barColorFriday"></div>              
+                  </div>     
+                  <p class = "dailyAmount">60oz</p>        
                 </div>
                 <div class="day">
                   <p>Saturday</p>
                   <div class="barBase">
-                    <div class="barColor"></div>
+                    <div class="barColorSaturday"></div>
                   </div>
+                  <p class = "dailyAmount">68oz</p>
                 </div>
                 <div class="day">
                   <p>Sunday</p>
                   <div class="barBase">
-                    <div class="barColor"></div>
+                    <div class="barColorSunday"></div>
                   </div>
+                  <p class = "dailyAmount">75oz</p>
                 </div>
               </section>
               
-            <!-- <p>How: <span id="reason"></span></p>
-            <div id="water">     
-            </div> -->
         </main>
 
 </body>
