@@ -86,3 +86,7 @@ article {
     width: 60%;
     margin-top: 50px;
   }
+.paraNext {
+  line-height: 2em;
+  font-weight: bold;
+}
