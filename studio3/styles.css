@@ -191,9 +191,24 @@ main {
     z-index: -1;
   }
 
-  /*confetti style*/
+  .confetti-button {
+    margin: 50px;
+    padding: 20px;
+    border-color: transparent;
+    border-radius: 50px;
+  }
+
+  .button-wrapper canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  /* confetti style
   .container {
-  width: 600x;
+  width: 600px;
   height: 100px;
   position: absolute;
   left: 30%;
@@ -263,4 +278,4 @@ main {
   outline: none;
   background: #2466ff;
   border-radius: 5px;
-}
+} */

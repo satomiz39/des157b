@@ -58,7 +58,7 @@ window.dragMoveListener = dragMoveListener
 // enable draggables to be dropped into this
 interact('.dropzone').dropzone({
     // only accept elements matching this CSS selector
-    accept: '#yes-drop',
+    accept: '#yes-drop, .drag-drop1, .drag-drop2, .drag-drop3, .drag-drop4, .drag-drop5, .drag-drop6, .drag-drop7, .drag-drop8',
     // Require a 75% element overlap for a drop to be possible
     overlap: 0.75,
   
@@ -107,33 +107,46 @@ interact('.dropzone').dropzone({
     listeners: { move: dragMoveListener }
   });
 
-    // confetti modal starts
-      const openbtn = document.querySelector(".open");
-      const modal = document.querySelector('.box');
-      const closeBtn = document.querySelector('.close');
-      // we are saying that when we click This
-      openbtn.addEventListener("click", () => {
-        modal.classList.add('visible')
-        openbtn.classList.add('hidden');
-        const startit = () => {
-          setTimeout(function () {
-            confetti.start();
-          }, 1000);
-        };
-        // Stops
-        const stopit = () => {
-          setTimeout(function () {
-            confetti.stop();
-          }, 5000);
-        };
-        // playing start
-        startit();
-        // stoping it
-        stopit();
-      });
-      closeBtn.addEventListener('click', () => {
-        modal.classList.remove('visible')
-        openbtn.classList.remove('hidden');
-      })
+  // confetti
+  document.getElementsByClassName("confetti-button")[0].addEventListener("click", () => {
+    confetti();
+    let canvas = document.createElement("canvas");
+    let container = document.getElementsByClassName("button-wrapper")[0];
+    canvas.width = 600;
+    canvas.height = 600;
+  
+    container.appendChild(canvas);
+    let confetti_button = confetti.create(canvas);
+    confetti_button().then(() => container.removeChild(canvas));
+  });
+
+    // // confetti modal starts
+    //   const openbtn = document.querySelector(".open");
+    //   const modal = document.querySelector('.box');
+    //   const closeBtn = document.querySelector('.close');
+    //   // we are saying that when we click This
+    //   openbtn.addEventListener("click", () => {
+    //     modal.classList.add('visible')
+    //     openbtn.classList.add('hidden');
+    //     const startit = () => {
+    //       setTimeout(function () {
+    //         confetti.start();
+    //       }, 1000);
+    //     };
+    //     // Stops
+    //     const stopit = () => {
+    //       setTimeout(function () {
+    //         confetti.stop();
+    //       }, 5000);
+    //     };
+    //     // playing start
+    //     startit();
+    //     // stoping it
+    //     stopit();
+    //   });
+    //   closeBtn.addEventListener('click', () => {
+    //     modal.classList.remove('visible')
+    //     openbtn.classList.remove('hidden');
+    //   })
 
 })(); // end IIFE

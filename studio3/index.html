@@ -16,7 +16,9 @@
     <link href="styles.css" rel="stylesheet" />
      <!--Script-->
     <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js" defer></script>
-    <script src="./confetti.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <!-- <script src="./confetti.min.js"></script> -->
     <script src="script.js" defer></script>
 
     
@@ -29,14 +31,24 @@
         <h2>Drag and Drop Orange carpel</h2>
       </header>
         <main>
-            <div id="yes-drop" class="drag-drop1"></div>
+          <div id="yes-drop">
+            <div class="drag-drop1"></div>
+            <div class="drag-drop2"></div>
+            <div class="drag-drop3"></div>
+            <div class="drag-drop4"></div>
+            <div class="drag-drop5"></div>
+            <div class="drag-drop6"></div>
+            <div class="drag-drop7"></div>
+            <div class="drag-drop8"></div>
+          </div>
+            <!-- <div id="yes-drop" class="drag-drop1"></div>
             <div id="yes-drop" class="drag-drop2"></div>
             <div id="yes-drop" class="drag-drop3"></div>
             <div id="yes-drop" class="drag-drop4"></div>
             <div id="yes-drop" class="drag-drop5"></div>
             <div id="yes-drop" class="drag-drop6"></div>
             <div id="yes-drop" class="drag-drop7"></div>
-            <div id="yes-drop" class="drag-drop8"></div>
+            <div id="yes-drop" class="drag-drop8"></div> -->
 
           <div id="rightPanel">
             <!-- #outer-dropzone -->
@@ -46,10 +58,14 @@
             </div>
           </div>
 
-           <!-- confetti modal -->
+          <div class="button-wrapper">
+            <button class="confetti-button">Click her when you're done</button>
+          </div>
+
+           <!-- confetti modal 
           <div class="container">
             <button class="open">Click here when you done</button>
-            <!-- modal -->
+  
             <div class="box">
               <div class="imgBox">
               </div>
@@ -61,7 +77,9 @@
                 <button class="close">close</button>
               </div>
             </div>
-          </div>
+          </div>-->
+          
+          
 
         </main>
     </div>
