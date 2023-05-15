@@ -90,3 +90,8 @@ article {
   line-height: 2em;
   font-weight: bold;
 }
+
+section .moodboard{
+  display: block;
+
+}
