@@ -14,8 +14,9 @@
     <title>Library Liberty</title>
 
     <link href="styles.css" rel="stylesheet" />
-
+     <!--Script-->
     <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js" defer></script>
+    <script src="./confetti.min.js"></script>
     <script src="script.js" defer></script>
 
     
@@ -28,25 +29,40 @@
         <h2>Drag and Drop Orange carpel</h2>
       </header>
         <main>
-  <div id="container">
-    <!-- <div id="no-drop" class="drag-drop"> #no-drop </div> -->
+            <div id="yes-drop" class="drag-drop1"></div>
+            <div id="yes-drop" class="drag-drop2"></div>
+            <div id="yes-drop" class="drag-drop3"></div>
+            <div id="yes-drop" class="drag-drop4"></div>
+            <div id="yes-drop" class="drag-drop5"></div>
+            <div id="yes-drop" class="drag-drop6"></div>
+            <div id="yes-drop" class="drag-drop7"></div>
+            <div id="yes-drop" class="drag-drop8"></div>
 
-    <div id="yes-drop" class="drag-drop"> #yes-drop </div>
-
-    <!-- #outer-dropzone -->
-    <div id="outer-dropzone" class="dropzone">
-      <!-- #inner-dropzone -->
-      <div id="inner-dropzone" class="dropzone"></div>
-    </div>
-          <!--
-              <div id="container">
-            <div id="orange">
+          <div id="rightPanel">
+            <!-- #outer-dropzone -->
+            <div id="outer-dropzone" class="dropzone">
+              <!-- #inner-dropzone -->
               <div id="inner-dropzone" class="dropzone"></div>
-              </div>
-              <div class="carpel"></div>
+            </div>
           </div>
-          -->
-          
+
+           <!-- confetti modal -->
+          <div class="container">
+            <button class="open">Click here when you done</button>
+            <!-- modal -->
+            <div class="box">
+              <div class="imgBox">
+              </div>
+              <h2 class="title">Congratulations You Completed! 🌟</h2>
+              <p>
+                yayyyyy.
+              </p>
+              <div class="btnContainer">
+                <button class="close">close</button>
+              </div>
+            </div>
+          </div>
+
         </main>
     </div>
   </body>

@@ -53,78 +53,214 @@ main {
     border-style: solid;
   }
   
-  .drag-drop {
+  .drag-drop1{
     display: inline-block;
-    min-width: 40px;
-    padding: 2em 0.5em;
-    margin: 1rem 0 0 1rem;
-    width: 300px;
-    height: 260px;
+    width: 240px;
+    height: 240px;
     border-radius: 50%;
-  
+    background-image: url(images/piece1.png);
+    background-repeat: no-repeat;
+    background-position: 60%;
+    background-size: 70%;
     color: #fff;
-    background-color: #29e;
-    border: solid 2px #fff;
-  
     touch-action: none;
     transform: translate(0px, 0px);
-  
     transition: background-color 0.3s;
   }
 
-  .drag-drop::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  .drag-drop2{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    clip-path: polygon(50% 50%, 0 0, 0 100%);
-    background-color: blue;
+    background-image: url(images/piece2.png);
+    background-repeat: no-repeat;
+    background-position: 80%;
+    background-size: 64%;
+    color: #fff;
+    touch-action: none;
+    transform: translate(0px, 0px);
+    transition: background-color 0.3s;
+
   }
-  
+
+  .drag-drop3{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url(images/piece3.png);
+    background-repeat: no-repeat;
+    background-position: 40%;
+    background-size: 66%;
+    color: #fff;
+    touch-action: none;
+    transform: translate(0px, 0px);
+    transition: background-color 0.3s;
+
+  }
+
+  .drag-drop4{
+    display: inline-block;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background-image: url(images/piece4.png);
+    background-repeat: no-repeat;
+    background-position: 60%;
+    background-size: 70%;
+    color: #fff;
+    touch-action: none;
+    transform: translate(0px, 0px);
+    transition: background-color 0.3s;
+  }
+
+  .drag-drop5{
+    display: inline-block;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background-image: url(images/piece5.png);
+    background-repeat: no-repeat;
+    background-position: 70%;
+    background-size: 72%;
+    color: #fff;
+    touch-action: none;
+    transform: translate(0px, 0px);
+    transition: background-color 0.3s;
+  }
+
+  .drag-drop6{
+    display: inline-block;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background-image: url(images/piece6.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 54%;
+    color: #fff;
+    touch-action: none;
+    transform: translate(0px, 0px);
+    transition: background-color 0.3s;
+  }
+
+
+  .drag-drop7{
+    display: inline-block;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background-image: url(images/piece7.png);
+    background-repeat: no-repeat;
+    background-position: 80%;
+    background-size: 54%;
+    color: #fff;
+    touch-action: none;
+    transform: translate(0px, 0px);
+    transition: background-color 0.3s;
+  }
+
+
+  .drag-drop8{
+    display: inline-block;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background-image: url(images/piece8.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 74%;
+    color: #fff;
+    touch-action: none;
+    transform: translate(0px, 0px);
+    transition: background-color 0.3s;
+  }
+
   .drag-drop.can-drop {
     color: #000;
-    background-color: #4e4;
-  }
-
-
-/* #orange {
-    height: 420px;
-    width: 420px;
-    background-color: #FA6D1D;
-    border-radius: 50%;
-    position: absolute;
-    left: 30%;  
-  }
-
-  #inner-dropzone {
-    height: 380px;
-    width: 380px;
-    border-radius: 50%;
-    background-color:#FFE27B;
-    position: absolute;
-    left: 20px;
-    top: 20px;
-  }
-
-  .carpel {
+    background-color: rgba(68, 238, 68, 0.034);
     width: 300px;
-    height: 260px;
-    border-radius: 50%;
-    position: relative;
+    height: 300px;
   }
 
-  .carpel::before {
-    content: "";
+  #rightPanel{
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    clip-path: polygon(50% 50%, 0 0, 0 100%);
-    background-color: blue;
-  } */
+    right: 20px;
+    top: 30px;
+    z-index: -1;
+  }
 
+  /*confetti style*/
+  .container {
+  width: 600x;
+  height: 100px;
+  position: absolute;
+  left: 30%;
+  top: 120%;
+  justify-content: center;
+  z-index: 2;
+}
+.open {
+  padding: 20px 80px;
+  font-size: 24px;
+  color: #fff;
+  border-radius: 100px;
+  border: none;
+  outline: none;
+  background: #2466ff;
+  cursor: pointer;
+  font-weight: 500;
+}
+.open.hidden {
+  display: none;
+  pointer-events: none;
+}
+.box {
+  padding: 30px 40px;
+  background: #fff;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 600px;
+  border-radius: 10px;
+  display: none;
+  pointer-events: none;
+}
+.box.visible {
+  display: block;
+  pointer-events: all;
+}
+.box .imgBox {
+  text-align: center;
+}
+.box img {
+  width: 180px;
+}
+.title {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 32px;
+  color: #222;
+}
+.box p {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 500;
+  color: #777;
+}
+.btnContainer {
+  display: flex;
+  justify-content: center;
+}
+.close {
+  margin-top: 30px;
+  width: 240px;
+  height: 54px;
+  cursor: pointer;
+  font-size: 17px;
+  color: #fff;
+  border: none;
+  outline: none;
+  background: #2466ff;
+  border-radius: 5px;
+}

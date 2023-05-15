@@ -75,36 +75,65 @@ interact('.dropzone').dropzone({
       // feedback the possibility of a drop
       dropzoneElement.classList.add('drop-target')
       draggableElement.classList.add('can-drop')
-      draggableElement.textContent = 'Dragged in'
+      // draggableElement.textContent = 'Dragged in'
     },
     ondragleave: function (event) {
       // remove the drop feedback style
       event.target.classList.remove('drop-target')
       event.relatedTarget.classList.remove('can-drop')
-      event.relatedTarget.textContent = 'Dragged out'
+      // event.relatedTarget.textContent = 'Dragged out'
     },
-    ondrop: function (event) {
-      event.relatedTarget.textContent = 'Dropped'
-    },
+    // ondrop: function (event) {
+    //   event.relatedTarget.textContent = 'Dropped'
+    // },
     ondropdeactivate: function (event) {
       // remove active dropzone feedback
       event.target.classList.remove('drop-active')
       event.target.classList.remove('drop-target')
     }
   })
-  
-  interact('.drag-drop')
-    .draggable({
-      inertia: true,
-      modifiers: [
-        interact.modifiers.restrictRect({
-          restriction: 'parent',
-          endOnly: true
-        })
-      ],
-      autoScroll: true,
-      // dragMoveListener from the dragging demo above
-      listeners: { move: dragMoveListener }
-    })
+
+  interact('.drag-drop1, .drag-drop2, .drag-drop3, .drag-drop4, .drag-drop5, .drag-drop6, .drag-drop7, .drag-drop8')
+  .draggable({
+    inertia: true,
+    modifiers: [
+      interact.modifiers.restrictRect({
+        restriction: 'parent',
+        endOnly: true
+      })
+    ],
+    autoScroll: true,
+    // dragMoveListener from the dragging demo above
+    listeners: { move: dragMoveListener }
+  });
+
+    // confetti modal starts
+      const openbtn = document.querySelector(".open");
+      const modal = document.querySelector('.box');
+      const closeBtn = document.querySelector('.close');
+      // we are saying that when we click This
+      openbtn.addEventListener("click", () => {
+        modal.classList.add('visible')
+        openbtn.classList.add('hidden');
+        const startit = () => {
+          setTimeout(function () {
+            confetti.start();
+          }, 1000);
+        };
+        // Stops
+        const stopit = () => {
+          setTimeout(function () {
+            confetti.stop();
+          }, 5000);
+        };
+        // playing start
+        startit();
+        // stoping it
+        stopit();
+      });
+      closeBtn.addEventListener('click', () => {
+        modal.classList.remove('visible')
+        openbtn.classList.remove('hidden');
+      })
 
 })(); // end IIFE
