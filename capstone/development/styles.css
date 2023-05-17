@@ -54,6 +54,12 @@ header {
   }
 
   img {
-    max-width: 800px;
+   width: 1100px;
     height: auto;
   }
+
+section .wireflows {
+    width: 1200px;
+    height: auto;
+    padding: 0;
+}
