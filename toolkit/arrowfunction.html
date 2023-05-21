@@ -26,13 +26,13 @@
 </head>
 <body>
     <h1>Arrow Function Challenge</h1>
+    <p>My function changes names of animals to upper case. </p>
 
     <h2>Named Function</h2>
-    <p>This named function multiplies two numbers together.</p>
     <code>
         <pre>
-            function multiply(a, b) {
-                return a * b;
+            function convertToUpperCase(animals) {
+                return animals.toUpperCase();
             }
         </pre>
     </code>
@@ -40,8 +40,8 @@
     <h2>Function Expression</h2>
     <code>
         <pre>
-            const multiply = function(a, b) {
-                return a * b;
+            const convertToUpperCase = function(animals) {
+            return animals.toUpperCase();
             };
         </pre>
     </code>
@@ -49,11 +49,13 @@
     <h2>Arrow Function</h2>
     <code>
         <pre>
-            const multiply = (a, b) => a * b;
+            const convertToUpperCase = (animals) => {
+            return animals.toUpperCase();
+            };
         </pre>
     </code>
 
-    <footer> Your Name </footer>
+    <footer> Satomi Richardson</footer>
     
 </body>
 </html>
