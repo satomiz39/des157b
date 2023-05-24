@@ -43,8 +43,8 @@ p {
     position: relative;
 }
 #puzzleContainer {
-    width: 405px;
-    height: 405px;
+    width: 410px;
+    height: 410px;
     border: 2px solid #D9D9D9;
     background-color: #AFAFB8;
     align-items: center;
