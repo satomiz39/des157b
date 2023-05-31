@@ -79,7 +79,7 @@
                         position: "relative"
                     }).appendTo(droppedOn);
                     if (squareNumber == pieceNumber){
-                       // alert("correct!");
+                       // Popup("correct!");
                         var popup = `#piece${pieceNumber}`;
                         $(popup).attr('class', 'showing');
 
@@ -93,9 +93,21 @@
                 }
 
             });
+            //show a pop up when the puzzle is completed
+            $("#btnDone").click(function() {
+                if ($("#puzzleContainer .droppableSpace").length === $("#puzzleContainer .piecePresent").length) {
+                    $("#lgPopup").removeClass("hidden").addClass("animate__bounceIn");
+                } else {
+                    alert("Please complete the puzzle first.");
+                }
+            });
+
+            // Close the lgPopup when the close button is clicked
+            $("#btnClosePopup").click(function() {
+                $("#lgPopup").removeClass("animate__bounceIn").addClass("hidden");
+            });
 
             //close the window
-
 
             $("#btnReset").click(function(){
                 window.location.reload();

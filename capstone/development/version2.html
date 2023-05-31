@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="styles3.css" rel="stylesheet">
+    <!--animate.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <!--script-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -21,6 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -28,26 +31,49 @@
         <h1>Unlock the Davis Seal</h1>
         <p>solve the puzzle and learn the city's history </p>
     </header>
-    <div id="container">
-        <div id="boxes">
-            <div id="pieceContainer"></div>
-            <div id="puzzleContainer"></div>
+        <div id="container">
+            <div id="boxes">
+                <div id="pieceContainer"></div>
+                <div id="puzzleContainer"></div>
+            </div>
+            <ul id="buttons">
+                <li><button id="btnStart">Start</button></li>
+                <li><button id="btnReset">Reset</button></li>
+                <li><button id="btnDone">Done</button></li>
+            </ul>
         </div>
-        <ul id="buttons">
-            <li><button id="btnStart">Start</button></li>
-            <li><button id="btnReset">Reset</button></li>
-            <li><button id="btnDone">Done</button></li>
-        </ul>
-    </div>
+        <div id="piece4" class="hidden">
+            <h4>Outer Ring</h4>
+            <p>
+            TThe Outer Ring showcases the native flora and fauna of Putah Creek, honoring the region's indigenous people and original landscape while celebrating the creek's restoration. Originally, the land's fertility attracted homesteaders, but the creek was diverted, leading to its dryness. Thanks to the efforts of local citizens, the dams were legally required to maintain natural stream flows, resulting in a remarkable increase in riparian species and the return of Steelhead Trout and chinook Salmon. The revival of Putah Creek serves as a habitat restoration model and a testament to successful cooperation between the City, University, non-profit organizations, volunteers, and businesses.
+            </p>
+        </div>
+        <div id="piece2" class="hidden">
+            <h4>Central Image</h4>
+            <p>
+            </p>
+        </div>
+
+        <div id="piece5" class="hidden">
+            <h4>Central Image</h4>
+            <p>
+                The seal's central image symbolizes the "Crossroads" of geographical and infrastructural elements that have shaped our city's foundation and development. The intersecting lines represent key features such as Putah Creek, the Railroad, Lincoln Highway, Interstate 80, and Highway 113. Putah Creek and its floodplains attracted settlers and played a role in establishing the University State Farm, which later became UC Davis. The railroad has been significant commercially and politically. The Lincoln Highway and Interstate 80 represent our physical connection to the West and Sacramento, highlighting our influence as a city near the State Government. These highways also symbolize our enduring relationship with other cities and entities in Yolo County.
+            </p>
+        </div>
+        
+        <!--Large Popup window when completed-->
+        <div id="lgPopup" class="animate__animated animate__bounceIn hidden">
+            <h1>Great Job!</h1>
+            <h2>You completed the puzzle</h2>
+            <div class="options">
+                <p>Play again</p>
+                <p>Learn more</p>
+            </div>
+            <button id="btnClosePopup">X</button>
+        </div>
+        
     <footer>
     </footer>
-    <div id="piece1" class="hidden">
-        <button id="hidePopup"></button>
-
-        <p></p>
-    </div>
-    <div id="piece14" class="hidden">
-        <p></p>
-    </div>
+  
 </body>
 </html>
