@@ -85,18 +85,19 @@
 
                         // Add click event to close the popup
                         $(popup).click(function(){
-                            $(this).removeClass('showing');
+                            $(popup).removeClass('showing');
+                            $(this).empty(); // remove content inside the popup
                         });
 
                     }
                     else{alert('incorrect')};
                 }
-
             });
-            //show a pop up when the puzzle is completed
+
+            //show a lgPopup when the puzzle is completed
             $("#btnDone").click(function() {
                 if ($("#puzzleContainer .droppableSpace").length === $("#puzzleContainer .piecePresent").length) {
-                    $("#lgPopup").removeClass("hidden").addClass("animate__bounceIn");
+                   $("#lgPopup").removeClass("hidden").addClass("animate__bounceIn");
                 } else {
                     alert("Please complete the puzzle first.");
                 }
