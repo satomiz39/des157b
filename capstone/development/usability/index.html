@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Puzzle</title>
+    
+    <!--stylesheet-->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="styles.css" rel="stylesheet">
+    <!--animate.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!--script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <script src="script.js" defer></script>
+
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Unlock the Davis Seal</h1>
+        <p>solve the puzzle and learn the city's history </p>
+    </header>
+        <div id="container">
+            <div id="boxes">
+                <div id="pieceContainer"></div>
+                <div id="puzzleContainer"></div>
+            </div>
+            <ul id="buttons">
+                <li><button id="btnStart">Start</button></li>
+                <li><button id="btnReset">Reset</button></li>
+                <li><button id="btnDone">Done</button></li>
+            </ul>
+        </div>
+
+        <div id="alertMessage">
+            <h2>Welcome to Davis Seal Project Puzzle!</h2>
+            <p class="instruction">Drag each puzzle piece to the drop zone located on the right side of the cubic tile.</p>
+            <button id="closeButton">Close</button>
+        </div>
+        
+
+        <!-- Seal Panel Info Popup-->
+        <div id="piece1" class="hidden">
+            <div class="window">
+                <img src="image/seals/outerRing.png" class="sealPiece" alt="seal">
+                    <div class="para1"> 
+                        <h3>Outer Ring</h3>
+                        <p>
+                        The Outer Ring showcases the native flora and fauna of Putah Creek, honoring the region's indigenous people and original landscape while celebrating the creek's restoration. Originally, the land's fertility attracted homesteaders, but the creek was diverted, leading to its dryness. Thanks to the efforts of local citizens, the dams were legally required to maintain natural stream flows, resulting in a remarkable increase in riparian species and the return of Steelhead Trout and chinook Salmon. 
+                        </p>
+                    </div>     
+                </div>  
+            </div>
+
+        <div id="piece4" class="hidden">
+          <div class="window">
+            <img src="image/seals//intersectingPanels.png" class="sealPiece" alt="seal">
+            <div class="para1"> 
+                <h3>Intersecting Panels</h3>
+                    <p>
+                        Two of the radiating panels in the second ring intersect it, spanning from the inner to the outermost ring. These panels symbolize the Pacific Flyway, which is integral to the city's development, vision, and sense of place. One panel depicts radiating fields representing the city's agricultural roots and ongoing leadership in agriculture. It also signifies the commitment to preserving agricultural land. The bird in flight symbolizes aspiration from a poem by Herbert Bauer. The companion panel showcases wetlands and migrating waterfowl, connecting to the region's natural landscape and reflecting citizen and government stewardship.
+                    </p>
+            </div>
+          </div> 
+        </div>
+
+        <div id="piece6" class="hidden">
+          <div class="window">
+            <img src="image/seals/centerImage.png" class="sealPiece" alt="seal">
+                <div class="para1">
+                    <h3>Central Image</h3>
+                    <p>
+                        The seal's central image symbolizes the "Crossroads" of geographical and infrastructural elements that have shaped our city's foundation and development. The intersecting lines represent key features such as Putah Creek, the Railroad, Lincoln Highway, Interstate 80, and Highway 113. Putah Creek and its floodplains attracted settlers and played a role in establishing the University State Farm, which later became UC Davis. The railroad has been significant commercially and politically. 
+                    </p>
+                </div>       
+            </div>  
+          </div>
+
+        <div id="piece9" class="hidden">
+          <div class="window">
+                <div class="para2">
+                    <h3>Second Ring</h3>
+                    <p>
+                        The second ring portrays the founding of Davisville and its early development, leading to the incorporation of the City of Davis. The imagery and narrative resemble the lyrical style of the inner ring's early history. It includes visuals such as the Davis Arch, the Pacific Railroad Line established in 1868, Davis Junction's original building or Spanish-style depot from 1914, boats crossing wetlands to Sacramento, the newly built Yolo Causeway in 1915, early farms, cattle ranches, and crops, the 1916 "Purple Circle" fire, and the 1917 vote for incorporation.
+                    </p>
+                </div>
+            <img src="image/seals/secondRing.png" class="sealPiece" alt="seal">
+          </div>
+        </div>
+          
+
+        <div id="piece10" class="hidden">
+            <div class="window">
+                <div class="para">
+                    <h3>Radiating Panels</h3>
+                    <p>
+                        The eight remaining outer panels, extending from the inner rings, visually depict our city's progress since incorporation. These panels explore themes that connect us to our origins while also projecting into the present and future. The two panels mentioned above exemplify themes like Leadership, Vision, Stewardship, Cooperation, and Aspiration. These themes persist throughout the remaining panels, along with others such as Community, Innovation, Engagement, Global Citizenship, and Optimism.
+                    </p>
+                </div>    
+                <img src="image/seals/radientPanels.png" class="sealPiece" alt="seal">
+            </div>   
+        </div>
+
+        <!--Large Popup window when completed-->
+        <div id="lgPopup" class="animate__animated animate__bounceIn hidden">
+            <h1>Great Job!</h1>
+            <h2>You completed the puzzle</h2>
+            <div class="options">
+                <p><a href="index.html" alt="home">Play again</a></p>
+                <p><a href="https://www.cityofdavis.org/city-hall/city-manager-s-office/arts-culture/davis-centennial-seal" target="blank" alt="city of davis-centennial-seal">Learn more</a></p>
+            </div>
+            <button id="btnClosePopup">X</button>
+        </div>
+        
+    <footer>
+        <!-- <p><a href="https://freesound.org/people/HenKonen/sounds/682142/"> sound source</a></p> -->
+    </footer>
+  
+</body>
+</html>
