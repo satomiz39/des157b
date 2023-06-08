@@ -1,29 +1,27 @@
-:root {
-    --page-height: 100vh;
- }
-
 body {
     background-color: #EFE3D3;
     font-family: 'Cabin', sans-serif;
     color: #1E7F94;
     text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 header {
     text-align: left;
     margin-left: 2em;
-    margin-top: 1em;
     line-height: 1em;
-    padding: 2em;
+    padding: 1.6em;
 }
 
 h1 {
     font-family: 'Calistoga', cursive;
-    font-size: 42px;
+    font-size: 40px;
 }
 
 h2 {
-    font-size: 28px;;
+    font-size: 26px;
 }
 
 h3 {
@@ -37,30 +35,43 @@ p {
 }
 
 #container{
-    width: 860px;
-    margin: 10px auto;
-    padding: 10px;
+    width: 1000px;
+    margin: 5px auto;
+    padding: 5px;
     position: relative;
+    align-items: center;
 }
 #boxes {
     display: flex;
     gap: 30px;
+    justify-content: space-between;
 }
 #pieceContainer {
-    width: 410px;
-    height: 410px;
+    width: 460px;
+    height: 460px;
     text-align: center;
     font-size: 30px;
     line-height: 400px;
     position: relative;
+    padding: 0;
 }
+
+.piece{ 
+    width: 114px;
+    height: 114px;
+    border: 0.2px solid #D9D9D9;
+    float: left;
+}
+
 #puzzleContainer {
-    width: 410px;
-    height: 410px;
-    border: 2px solid #D9D9D9;
+    width: 460px;
+    height: 460px;
+    border: 0.2px solid #D9D9D9;
     background-color: #AFAFB8;
     align-items: center;
+    padding: 0;
 }
+
 ul {
     list-style-type: none;
     text-align: center;
@@ -92,13 +103,6 @@ ul button:hover{
 
 #btnDone {
     display: none;
-}
-
-.piece{ 
-    width: 100px;
-    height: 100px;
-    border: 1px solid #D9D9D9;
-    float: left;
 }
 
 .hidden {
@@ -218,11 +222,13 @@ canvas#confetti {
     padding: 20px;
     border-radius: 5px;
     text-align: center;
+    max-width: 800px;
 }
 
 .instruction {
     text-align: left;
-    padding: 1.2em;
+    padding: 1.6em;
+    line-height: 1.6em;
 }
 
 footer {

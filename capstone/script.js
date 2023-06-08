@@ -2,18 +2,39 @@
     console.log('reading js');
     const sealSound = new Audio('sounds/sealSound.mp3');
 
-    //instruction message
+    // //instruction message
+    // $(document).ready(function() {
+    //     // Show the overlay and alert message
+    //     $('#overlay').show();
+    //     $('#alertMessage').show();
+    
+    //     // Handle close button click event
+    //     $('#closeButton').click(function() {
+    //         $('#overlay').hide();
+    //         $('#alertMessage').hide();
+    //     });
+    // });
+
     $(document).ready(function() {
+        var startButton = $("#btnStart");
+        var closeButton = $('#closeButton');
+        var overlay = $('#overlay');
+        var alertMessage = $('#alertMessage');
+    
         // Show the overlay and alert message
         $('#overlay').show();
         $('#alertMessage').show();
     
-        // Handle close button click event
-        $('#closeButton').click(function() {
+        // Show the start button
+        startButton.show();
+    
+        // Handle start button click event
+        startButton.click(function() {
             $('#overlay').hide();
             $('#alertMessage').hide();
         });
     });
+    
     
     
 
@@ -27,7 +48,7 @@
         {
             for (var j=0; j<columns; j++)
             {
-                pieces+= `<div class='piece'><img src='image/puzzles/seal${place}.jpg' width='100'></div>`;
+                pieces+= `<div class='piece'><img src='image/puzzles/seal${place}.jpg' width='114'></div>`;
                 place++;
                 order++;
             }
