@@ -48,7 +48,7 @@
         {
             for (var j=0; j<columns; j++)
             {
-                pieces+= `<div class='piece'><img src='image/puzzles/seal${place}.jpg' width='113'></div>`;
+                pieces+= `<div class='piece'><img src='image/puzzles/seal${place}.jpg' width='112.5'></div>`;
                 place++;
                 order++;
             }
